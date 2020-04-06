@@ -7,6 +7,7 @@ import android.view.View;
 
 import com.android.databinding.library.baseAdapters.BR;
 import com.subhrajyoti.borrow.databinding.RecyclerItemBinding;
+import com.subhrajyoti.borrow.db.BorrowModel;
 
 public class ItemViewHolder extends RecyclerView.ViewHolder {
 
@@ -21,6 +22,7 @@ public class ItemViewHolder extends RecyclerView.ViewHolder {
     public void bind(Object obj){
         binding.setVariable(BR.model,obj);
         binding.executePendingBindings();
+        binding.setHandler(new MyHandlers((BorrowModel) obj));
     }
 
 }

@@ -2,6 +2,7 @@ package com.subhrajyoti.borrow.addItem;
 
 import android.app.DatePickerDialog;
 import android.arch.lifecycle.ViewModelProviders;
+import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
@@ -12,6 +13,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.subhrajyoti.borrow.R;
+import com.subhrajyoti.borrow.databinding.ActivityMainBinding;
 import com.subhrajyoti.borrow.db.BorrowModel;
 
 import java.util.Calendar;
@@ -28,10 +30,14 @@ public class AddActivity extends AppCompatActivity implements DatePickerDialog.O
 
     private AddBorrowViewModel addBorrowViewModel;
 
+    private ActivityMainBinding binding;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add);
+//        binding = DataBindingUtil.setContentView(this, R.layout.activity_add);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 

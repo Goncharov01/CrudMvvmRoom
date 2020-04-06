@@ -11,7 +11,7 @@
             type="com.subhrajyoti.borrow.listItems.RecyclerViewAdapter" />
 
         <variable
-            name="handlerAdapter"
+            name="handler"
             type="com.subhrajyoti.borrow.listItems.MyHandlers" />
 
     </data>
@@ -47,7 +47,7 @@
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
-        android:onClick="@{(view) -> handlerAdapter.onLongClick(view)}"
+        android:onClick="@{(view) -> handler.onLongClick(view)}"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"

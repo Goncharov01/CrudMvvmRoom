@@ -35,6 +35,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<ItemViewHolder> {
     public void onBindViewHolder(@NonNull ItemViewHolder holder, int position) {
         BorrowModel borrowModel = borrowModelList.get(position);
         holder.bind(borrowModel);
+//        holder.itemView.setOnLongClickListener(longClickListener);
     }
 
 

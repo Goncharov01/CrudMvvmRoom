@@ -34,8 +34,8 @@ public class MainActivity extends AppCompatActivity implements View.OnLongClickL
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
 
-        MyHandlers myHandlers = new MyHandlers();
-        binding.setHandlerAdapter(myHandlers);
+//        MyHandlers myHandlers = new MyHandlers();
+//        binding.setHandler(myHandlers);
 
 //        FloatingActionButton fab = findViewById(R.id.fab);
 //        fab.setOnClickListener(new View.OnClickListener() {
@@ -64,15 +64,14 @@ public class MainActivity extends AppCompatActivity implements View.OnLongClickL
             }
         });
 
-
-
-
     }
 
     @Override
     public boolean onLongClick(View v) {
         BorrowModel borrowModel = (BorrowModel) v.getTag();
-        viewModel.deleteItem(borrowModel);
+        System.out.println(borrowModel);
         return true;
+
     }
+
 }
